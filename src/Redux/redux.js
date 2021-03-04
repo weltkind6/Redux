@@ -15,6 +15,11 @@ const reducer = (state = initialState, action) => {
                 counter: state.counter - 1
             }
         }
+        case 'ADD-FIF': {
+            return {
+                counter: state.counter + action.payload
+            }
+        }
     }
     return state
 }

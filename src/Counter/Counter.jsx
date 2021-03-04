@@ -9,6 +9,7 @@ class Counter extends React.Component {
                     addCount={this.props.addCount}
                     subCount={this.props.subCount}
                     counter={this.props.counter}
+                    addFif={() => this.props.addFif(15)}
                 />
             </div>
         );
@@ -21,6 +22,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     addCount: () => dispatch({type: 'ADD-COUNT'}),
     subCount: () => dispatch({type: 'SUB-COUNT'}),
+    addFif: number => dispatch({type: 'ADD-FIF', payload: number})
 })
 
 
@@ -30,6 +32,8 @@ const PureCounter = props => {
             <h2>Counter: {props.counter}</h2>
             <button onClick={props.addCount}>Add +</button>
             <button onClick={props.subCount}>Add -</button>
+        <hr/>
+            <button onClick={props.addFif}>Add 15</button>
         </div>
     )
 }
