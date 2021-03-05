@@ -1,37 +1,9 @@
 import {createStore} from "redux";
+import rootReducer from "./Reducers/rootReducer";
 
-const initialState = {
-    counter: 0
-}
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'ADD-COUNT': {
-            return {
-                counter: state.counter + 1
-            }
-        }
-        case 'SUB-COUNT': {
-            return {
-                counter: state.counter - 1
-            }
-        }
-        case 'ADD-FIF': {
-            return {
-                counter: state.counter + action.payload
-            }
-        }
-    }
-    return state
-}
 
-const store = createStore(reducer)
 
-const addCount = ({
-    type: 'ADD-COUNT'
-})
-const subCount = ({
-    type: 'SUB-COUNT'
-})
-store.dispatch(addCount, subCount)
+const store = createStore(rootReducer)
+
 
 export default store

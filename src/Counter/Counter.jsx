@@ -17,7 +17,7 @@ class Counter extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    counter: state.counter
+    counter: state.reducer.counter
 })
 const mapDispatchToProps = dispatch => ({
     addCount: () => dispatch({type: 'ADD-COUNT'}),
