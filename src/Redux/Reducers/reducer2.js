@@ -8,7 +8,8 @@ export const reducer2 = (state = initialState, action) => {
                 counter2: state.counter2 + 3
             }
         }
+        default:
+            return state
     }
-    return state
 }
 

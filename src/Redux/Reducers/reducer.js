@@ -18,6 +18,7 @@ export const reducer = (state = initialState, action) => {
                 counter: state.counter + action.payload
             }
         }
+        default:
+            return state
     }
-    return state
 }
